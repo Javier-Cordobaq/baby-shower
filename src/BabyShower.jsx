@@ -156,7 +156,7 @@ export default function BabyShower() {
             <div className="opciones">
               {regalos.map((r) => {
                 const activo = seleccionado === r.id;
-                const pocos  = r.disponibles != null && r.disponibles <= 2;
+                const pocos  = r.disponibles === 1;
                 return (
                   <label key={r.id} className={"opcion" + (activo ? " opcion-activa" : "")}>
                     <input
